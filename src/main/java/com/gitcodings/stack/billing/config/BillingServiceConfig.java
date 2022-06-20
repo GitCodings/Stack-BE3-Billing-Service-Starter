@@ -1,4 +1,4 @@
-package com.github.klefstad_teaching.cs122b.billing.config;
+package com.gitcodings.stack.billing.config;
 
 import com.stripe.Stripe;
 import org.springframework.boot.context.properties.ConfigurationProperties;

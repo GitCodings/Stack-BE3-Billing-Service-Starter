@@ -1,18 +1,18 @@
-package com.github.klefstad_teaching.cs122b.billing.rest;
+package com.gitcodings.stack.billing.rest;
 
-import com.github.klefstad_teaching.cs122b.billing.repo.BillingRepo;
-import com.github.klefstad_teaching.cs122b.billing.util.Validate;
+import com.gitcodings.stack.billing.repo.BillingRepo;
+import com.gitcodings.stack.billing.util.Validate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class OrderController
+public class CartController
 {
     private final BillingRepo repo;
     private final Validate    validate;
 
     @Autowired
-    public OrderController(BillingRepo repo,Validate validate)
+    public CartController(BillingRepo repo, Validate validate)
     {
         this.repo = repo;
         this.validate = validate;

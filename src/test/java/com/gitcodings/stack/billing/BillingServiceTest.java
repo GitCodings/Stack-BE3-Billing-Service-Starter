@@ -1,8 +1,8 @@
-package com.github.klefstad_teaching.cs122b.billing;
+package com.gitcodings.stack.billing;
 
-import com.github.klefstad_teaching.cs122b.core.result.BillingResults;
-import com.github.klefstad_teaching.cs122b.core.result.Result;
-import com.github.klefstad_teaching.cs122b.core.security.JWTAuthenticationFilter;
+import com.gitcodings.stack.core.result.BillingResults;
+import com.gitcodings.stack.core.result.Result;
+import com.gitcodings.stack.core.security.JWTAuthenticationFilter;
 import com.stripe.model.PaymentIntent;
 import com.stripe.param.PaymentIntentConfirmParams;
 import com.stripe.param.PaymentIntentCreateParams;

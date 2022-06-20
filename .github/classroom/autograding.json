@@ -8,7 +8,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "cartInsertInvalidQuantityZero",
@@ -18,7 +18,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "cartInsertInvalidQuantityNegative",
@@ -28,7 +28,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "cartInsertInvalidQuantityMax",
@@ -38,7 +38,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "cartInsertMovie",
@@ -48,7 +48,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "cartInsertMovieAlreadyInserted",
@@ -58,7 +58,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "cartInsertMovieExistingCart",
@@ -68,7 +68,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "cartInsertMovieMultiple",
@@ -78,7 +78,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "cartUpdateInvalidQuantityZero",
@@ -88,7 +88,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "cartUpdateInvalidQuantityNegative",
@@ -98,7 +98,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "cartUpdateInvalidQuantityMax",
@@ -108,7 +108,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "cartUpdateMovieNotInCart",
@@ -118,7 +118,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "cartUpdateMovieQuantity",
@@ -128,7 +128,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "cartDeleteDoesNotExist",
@@ -138,7 +138,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "cartDeleteSuccess",
@@ -148,7 +148,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "cartDeleteFailOnSecond",
@@ -158,7 +158,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "cartDeleteDoesntEffectSameMovie",
@@ -168,7 +168,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "cartRetrieveEmpty",
@@ -178,7 +178,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "cartRetrieveAdmin",
@@ -188,7 +188,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "cartRetrieveEmployee",
@@ -198,7 +198,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "cartRetrievePremium",
@@ -208,7 +208,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "cartClearAdmin",
@@ -218,7 +218,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "cartClearEmployee",
@@ -228,7 +228,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "cartClearPremium",
@@ -238,7 +238,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "orderPaymentEmptyCart",
@@ -248,7 +248,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "orderPaymentCreated",
@@ -258,7 +258,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "orderComplete",
@@ -268,7 +268,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "orderCompleteWrongUser",
@@ -278,7 +278,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "orderCompleteNotCompleted",
@@ -288,7 +288,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "orderListFoundAdmin",
@@ -298,7 +298,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "orderListFoundEmployee",
@@ -308,7 +308,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "orderListFoundPremium",
@@ -318,7 +318,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "orderListNoneFound",
@@ -328,7 +328,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "orderDetailWrongUserAdmin",
@@ -338,7 +338,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "orderDetailEmployee",
@@ -348,7 +348,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "orderDetailPremium",
@@ -358,7 +358,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     }
   ]
 }

@@ -1,4 +1,4 @@
-package com.github.klefstad_teaching.cs122b.billing.util;
+package com.gitcodings.stack.billing.util;
 
 import org.springframework.stereotype.Component;
 

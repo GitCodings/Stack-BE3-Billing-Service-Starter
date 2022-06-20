@@ -14,35 +14,29 @@ SET @admin = 1;
 SET @employee = 2;
 SET @premium = 3;
 
-SET @employee_sale_one = 1;
-SET @employee_sale_two = 2;
-SET @premium_sale_one = 3;
-
 INSERT INTO billing.cart (user_id, movie_id, quantity)
-VALUES (@admin, 1843866, 2),
-       (@admin, 4154756, 7),
-       (@admin, 4154796, 8),
-       (@employee, 1013743, 1),
-       (@employee, 1117563, 2),
-       (@employee, 113071, 3),
-       (@employee, 1545660, 1),
-       (@employee, 1683043, 2),
-       (@employee, 183790, 1),
-       (@employee, 1843866, 10),
-       (@employee, 2101383, 2),
-       (@employee, 2166834, 3),
-       (@employee, 2313197, 1),
-       (@employee, 2493486, 2),
-       (@employee, 4154756, 5),
-       (@employee, 4154796, 1),
-       (@premium, 1843866, 3),
-       (@premium, 2101383, 2),
-       (@premium, 4154796, 8);
+VALUES (@admin, 299534, 1),
+       (@admin, 299536, 2),
+       (@admin, 24428, 4),
+       (@admin, 99861, 8),
+       (@employee, 472027, 1),
+       (@employee, 287757, 2),
+       (@employee, 142061, 3),
+       (@employee, 40662, 4),
+       (@employee, 123025, 5),
+       (@employee, 414906, 6),
+       (@employee, 736073, 7),
+       (@employee, 272, 8),
+       (@employee, 736074, 3),
+       (@employee, 456348, 1),
+       (@premium, 634649, 1),
+       (@premium, 429617, 3),
+       (@premium, 315635, 9);
 
 INSERT INTO billing.sale (id, user_id, total, order_date)
-VALUES (@employee_sale_one, @employee, 234.45, TIMESTAMP '2022-01-01 12:00:00'),
-       (@employee_sale_two, @employee, 299.30, TIMESTAMP '2022-01-02 12:00:00'),
-       (@premium_sale_one, @premium, 345.65, TIMESTAMP '2022-01-03 12:00:00'),
+VALUES (1, @employee, 234.45, TIMESTAMP '2022-01-01 12:00:00'),
+       (2, @employee, 299.30, TIMESTAMP '2022-01-02 12:00:00'),
+       (3, @premium, 345.65, TIMESTAMP '2022-01-03 12:00:00'),
        (4, @admin, 45.95, TIMESTAMP '2022-01-04 12:00:00'),
        (5, @admin, 152.95, TIMESTAMP '2022-01-05 12:00:00'),
        (6, @admin, 23.95, TIMESTAMP '2022-01-06 12:00:00'),
@@ -51,12 +45,18 @@ VALUES (@employee_sale_one, @employee, 234.45, TIMESTAMP '2022-01-01 12:00:00'),
        (9, @admin, 59.95, TIMESTAMP '2022-01-09 12:00:00');
 
 INSERT INTO billing.sale_item (sale_id, movie_id, quantity)
-VALUES (@employee_sale_one, 1843866, 1),
-       (@employee_sale_one, 2101383, 3),
-       (@employee_sale_one, 4154796, 7),
-       (@employee_sale_two, 183790, 2),
-       (@employee_sale_two, 2101383, 4),
-       (@employee_sale_two, 2313197, 8),
-       (@premium_sale_one, 183790, 3),
-       (@premium_sale_one, 2101383, 5),
-       (@premium_sale_one, 2166834, 9);
+VALUES (1, 105, 1),
+       (1, 165, 2),
+       (1, 196, 3),
+       (2, 1893, 1),
+       (2, 1894, 2),
+       (2, 1895, 3),
+       (3, 140607, 7),
+       (3, 181808, 8),
+       (3, 181812, 9),
+       (4, 13804, 4),
+       (5, 51497, 5),
+       (6, 82992, 6),
+       (7, 168259, 7),
+       (8, 337339, 8),
+       (9, 385128, 9);

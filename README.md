@@ -1,4 +1,4 @@
-# CS122B Backend 3 - The Billing Service
+# Stack Backend 3 - The Billing Service
 
 #### [Stripe](#stripe)
 
@@ -72,7 +72,7 @@ There are two folders in this project that contain resources, and application se
 
 There is a Single class that contain all of our test cases: 
 
- - [BillingServiceTest](/src/test/java/com/github/klefstad_teaching/cs122b/billing/BillingServiceTest.java)
+ - [BillingServiceTest](/src/test/java/com/gitcodings/stack/billing/BillingServiceTest.java)
 
 ## Database
 
@@ -299,13 +299,13 @@ This is done by insuring that all `null` values are dropped by either:
 - Putting the `@JsonInclude(JsonInclude.Include.NON_NULL)` on your Model class
   
 ### Result
-All `Result` objects are available as static constants inside of the `com.github.klefstad_teaching.cs122b.core.result.BillingResults` class.
+All `Result` objects are available as static constants inside of the `com.gitcodings.stack.core.result.BillingResults` class.
 These can be used rather than creating your own.
 
 ### SignedJWT
 All endpoints in this service are considered 'privilged' as in, the user calling the endpoint must be authorized and as such must included their serialized `SignedJWT` inlcuded in the header of the request under the `Authorization` header. In the test cases you'll see that we are including these headers with JWT's for your convenience when testing.
 
-In Spring there is a way to automatically take this header and turn it into a `SignedJWT` (This is already done for you by a provided filter here: [JWTAuthenticationFilter](https://github.com/klefstad-teaching/CS122B-Core/blob/main/src/main/java/com/github/klefstad_teaching/cs122b/core/security/JWTAuthenticationFilter.java)). There is also a way to "ask" spring for this `SignedJWT` by using the `@AuthenticationPrincipal SignedJWT user` function parameter in the endpoint like so:
+In Spring there is a way to automatically take this header and turn it into a `SignedJWT` (This is already done for you by a provided filter here: [JWTAuthenticationFilter](https://github.com/GitCodings/Stack-Core/blob/main/src/main/java/com/gitcodings/stack/core/security/JWTAuthenticationFilter.java)). There is also a way to "ask" spring for this `SignedJWT` by using the `@AuthenticationPrincipal SignedJWT user` function parameter in the endpoint like so:
 
 ```java
 @GetMapping("/path")
@@ -325,7 +325,7 @@ A convient function to use to get our roles our of our `SignedJWT` is  `.getStri
 
 **Very Important** For all values that deal with money, Including those in our `ResponseModel` We want to make sure we are returning a type of `BigDecimal` with a scale set to `2`. The tests will fail if we do not have it set to this scale as json considers: `14.5500` different than `14.55`.
 
-Refer to Activity 5 for how to deal with [BigDecimal](https://github.com/klefstad-teaching/CS122B-A5-Stripe#bigdecimal) on how to deal with `BigDecimal`'s especially the last part with dealing with scale and rounding.
+Refer to Activity 5 for how to deal with [BigDecimal](https://github.com/GitCodings/Stack-A5-Stripe#bigdecimal) on how to deal with `BigDecimal`'s especially the last part with dealing with scale and rounding.
 
 ### Applying Discount For Premium Users
 
@@ -872,7 +872,7 @@ The PaymentIntent should be created with these three properties
 2. **Description:** The description of the movie's titles in list format (\<title>, \<title>, ... , \<title>). 
 3. **Metadata:** The key-value pair of "userId": \<userId stored in the users JWT>
 
-Refer to Activity 5 for how to deal with [BigDecimal](https://github.com/klefstad-teaching/CS122B-A5-Stripe#bigdecimal) on how to deal with `BigDecimal`'s especially the last part with dealing with scale and rounding.
+Refer to Activity 5 for how to deal with [BigDecimal](https://github.com/GitCodings/Stack-A5-Stripe#bigdecimal) on how to deal with `BigDecimal`'s especially the last part with dealing with scale and rounding.
 
 
 ### Path
