@@ -34,15 +34,15 @@ VALUES (@admin, 299534, 1),
        (@premium, 315635, 9);
 
 INSERT INTO billing.sale (id, user_id, total, order_date)
-VALUES (1, @employee, 234.45, TIMESTAMP '2022-01-01 12:00:00'),
-       (2, @employee, 299.30, TIMESTAMP '2022-01-02 12:00:00'),
-       (3, @premium, 345.65, TIMESTAMP '2022-01-03 12:00:00'),
-       (4, @admin, 45.95, TIMESTAMP '2022-01-04 12:00:00'),
-       (5, @admin, 152.95, TIMESTAMP '2022-01-05 12:00:00'),
-       (6, @admin, 23.95, TIMESTAMP '2022-01-06 12:00:00'),
-       (7, @admin, 9.95, TIMESTAMP '2022-01-07 12:00:00'),
+VALUES (1, @employee, 69.70, TIMESTAMP '2022-01-01 12:00:00'),
+       (2, @employee, 119.70, TIMESTAMP '2022-01-02 12:00:00'),
+       (3, @premium, 377.55, TIMESTAMP '2022-01-03 12:00:00'),
+       (4, @admin, 79.80, TIMESTAMP '2022-01-04 12:00:00'),
+       (5, @admin, 99.75, TIMESTAMP '2022-01-05 12:00:00'),
+       (6, @admin, 119.70, TIMESTAMP '2022-01-06 12:00:00'),
+       (7, @admin, 139.65, TIMESTAMP '2022-01-07 12:00:00'),
        (8, @admin, 105.45, TIMESTAMP '2022-01-08 12:00:00'),
-       (9, @admin, 59.95, TIMESTAMP '2022-01-09 12:00:00');
+       (9, @admin, 159.60, TIMESTAMP '2022-01-09 12:00:00');
 
 INSERT INTO billing.sale_item (sale_id, movie_id, quantity)
 VALUES (1, 105, 1),

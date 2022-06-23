@@ -290,8 +290,10 @@ public class BillingServiceTest
     public void cartInsertMovie()
         throws Exception
     {
+        final int AVATAR_MOVIE_ID = 19995;
+
         JSONObject request = new JSONObject();
-        request.put("movieId", 15324);
+        request.put("movieId", AVATAR_MOVIE_ID);
         request.put("quantity", 2);
 
         JSONArray expected = new JSONArray();
@@ -312,8 +314,10 @@ public class BillingServiceTest
     public void cartInsertMovieAlreadyInserted()
         throws Exception
     {
+        final int AVENGERS_MOVIE_ID = 299534;
+
         JSONObject request = new JSONObject();
-        request.put("movieId", 4154796);
+        request.put("movieId", AVENGERS_MOVIE_ID);
         request.put("quantity", 1);
 
         this.mockMvc.perform(post(CART_INSERT_PATH)
@@ -333,9 +337,11 @@ public class BillingServiceTest
     public void cartInsertMovieExistingCart()
         throws Exception
     {
+        final int AVATAR_MOVIE_ID = 19995;
+
         JSONObject request = new JSONObject();
-        request.put("movieId", 1013743);
-        request.put("quantity", 1);
+        request.put("movieId", AVATAR_MOVIE_ID);
+        request.put("quantity", 2);
 
         this.mockMvc.perform(post(CART_INSERT_PATH)
                                  .contentType(MediaType.APPLICATION_JSON)
@@ -354,11 +360,14 @@ public class BillingServiceTest
     public void cartInsertMovieMultiple()
         throws Exception
     {
+        final int AVATAR_MOVIE_ID = 19995;
+        final int IRON_MAN_MOVIE_ID = 1726;
+
         JSONArray expected = new JSONArray();
 
         JSONObject firstRequest = new JSONObject();
-        firstRequest.put("movieId", 15324);
-        firstRequest.put("quantity", 2);
+        firstRequest.put("movieId", IRON_MAN_MOVIE_ID);
+        firstRequest.put("quantity", 7);
 
         expected.add(firstRequest);
 
@@ -370,8 +379,8 @@ public class BillingServiceTest
                     .andExpectAll(isResult(BillingResults.CART_ITEM_INSERTED));
 
         JSONObject secondRequest = new JSONObject();
-        secondRequest.put("movieId", 4154796);
-        secondRequest.put("quantity", 7);
+        secondRequest.put("movieId", AVATAR_MOVIE_ID);
+        secondRequest.put("quantity", 2);
 
         expected.add(secondRequest);
 
@@ -461,8 +470,8 @@ public class BillingServiceTest
         throws Exception
     {
         JSONObject request = new JSONObject();
-        request.put("movieId", 1843866);
-        request.put("quantity", 8);
+        request.put("movieId", 24428);
+        request.put("quantity", 1);
 
         this.mockMvc.perform(post(CART_UPDATE_PATH)
                                  .contentType(MediaType.APPLICATION_JSON)
@@ -495,7 +504,7 @@ public class BillingServiceTest
     public void cartDeleteSuccess()
         throws Exception
     {
-        this.mockMvc.perform(delete(CART_DELETE_ID_PATH, 1843866)
+        this.mockMvc.perform(delete(CART_DELETE_ID_PATH, 24428)
                                  .contentType(MediaType.APPLICATION_JSON)
                                  .header(HttpHeaders.AUTHORIZATION, adminHeader))
                     .andDo(print())
@@ -511,7 +520,7 @@ public class BillingServiceTest
     public void cartDeleteFailOnSecond()
         throws Exception
     {
-        this.mockMvc.perform(delete(CART_DELETE_ID_PATH, 1843866)
+        this.mockMvc.perform(delete(CART_DELETE_ID_PATH, 24428)
                                  .contentType(MediaType.APPLICATION_JSON)
                                  .header(HttpHeaders.AUTHORIZATION, adminHeader))
                     .andDo(print())
@@ -520,7 +529,7 @@ public class BillingServiceTest
         JSONArray expected = getModel("cartDeleteSuccess", JSONArray.class);
 
         Assertions.assertEquals(expected.toJSONString(), getCart(adminId).toJSONString());
-        this.mockMvc.perform(delete(CART_DELETE_ID_PATH, 1843866)
+        this.mockMvc.perform(delete(CART_DELETE_ID_PATH, 24428)
                                  .contentType(MediaType.APPLICATION_JSON)
                                  .header(HttpHeaders.AUTHORIZATION, adminHeader))
                     .andDo(print())
@@ -532,7 +541,7 @@ public class BillingServiceTest
     public void cartDeleteDoesntEffectSameMovie()
         throws Exception
     {
-        this.mockMvc.perform(delete(CART_DELETE_ID_PATH, 1843866)
+        this.mockMvc.perform(delete(CART_DELETE_ID_PATH, 24428)
                                  .contentType(MediaType.APPLICATION_JSON)
                                  .header(HttpHeaders.AUTHORIZATION, adminHeader))
                     .andDo(print())
